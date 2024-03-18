@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+
+{% block main %}
+<h1 class="display-5 fw-bold">Add New Property</h1>
+
+
+<div class="p-5 mb-4 bg-light rounded-3 border">
+    <form action="{{ url_for('new_property') }}" method="POST" enctype="multipart/form-data">
+
+        {{ form.csrf_token }}
+        
+        <div class="form-group mb-3">
+          <strong>{{ form.property_title.label }}</strong>
+          {{ form.property_title(class="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+          <strong>{{ form.property_description.label }}</strong>
+          {{ form.property_description(class="form-control", rows=4) }}
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <strong>{{ form.num_rooms.label }}</strong>
+                {{ form.num_rooms(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <strong>{{ form.num_bathrooms.label }}</strong>
+                {{ form.num_bathrooms(class="form-control") }}
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <strong>{{ form.price.label }}</strong>
+                {{ form.price(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <strong>{{ form.property_type.label }}</strong>
+                {{ form.property_type(class="form-control") }}
+              </div>
+            </div>
+          </div>
+        <div class="form-group mb-3">
+            <strong>{{ form.location.label }}</strong>
+          {{ form.location(class="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+            <strong>{{ form.photo.label }}</strong>
+          {{ form.photo(class="form-control") }}
+        </div>
+      
+        {# Add the file upload field as you learnt for Flask-WTF #}
+      
+        <button type="submit" name="submit" class="btn btn-primary">Add Property</button>
+      </form>
+</div>
+
+{% endblock %}
+
+{% block js %}{% endblock %}
+

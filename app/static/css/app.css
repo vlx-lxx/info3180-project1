@@ -1,3 +1,89 @@
 body {
     padding-top: 5rem;
 }
+
+.image-grid img {
+    max-width: 100%;
+    height: 7cm;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
+}
+
+.card-texts{
+    display: inline-block;
+    margin-right: 10px; /* Add some spacing between paragraphs if needed */
+}
+
+.card-text-price {
+    display: inline-block; /* Ensures elements appear next to each other */
+    background-color: rgb(66, 66, 228); /* Sets the background color to blue */
+    color: white; /* Sets the text color to white for better visibility */
+    padding: 5px; /* Adds some padding inside the rectangle */
+    border-radius: 20px; /* Applies border radius to create rounded corners */
+    width: 12%;
+    text-align: center;
+    margin-bottom: 10px; /* Adds some margin for spacing */
+}
+
+.card-text-pric {
+   
+    background-color: blue; /* Sets the background color to blue */
+    color: white; /* Sets the text color to white for better visibility */
+    border-radius: 20px; /* Applies border radius to create rounded corners */
+    width: 25%;
+    text-align: center;
+    /* margin-bottom: 10px; Adds some margin for spacing */
+}
+
+.card-text-type {
+    display: inline-block; /* Ensures elements appear next to each other */
+    background-color:rgb(157, 157, 0); /* Sets the background color to blue */
+    color: white; /* Sets the text color to white for better visibility */
+    padding: 5px; /* Adds some padding inside the rectangle */
+    border-radius: 20px; /* Applies border radius to create rounded corners */
+    width: 10%;
+    text-align: center;
+}
+
+.image-grid-view {
+    position: relative;
+    width: 100%; /* Set the width of the container to 50% of the card */
+    height: 100%; /* Set the height of the container to 100% of the card */
+    display: flex;
+}
+
+.image-grid-view img {
+    position: absolute; /* Position the image absolutely within its container */
+    top: 0; /* Align the image to the top of the container */
+    left: 0; /* Align the image to the left of the container */
+    width: 100%; /* Ensure the image fills the container width */
+    height: 100%; /* Ensure the image fills the container height */
+    object-fit: cover; /* Make the image cover the container */
+}
+
+
+.card {
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    display: flex;
+}
+
+a.view-button {
+    background-color: green;
+    width: 100%; /* Set the width of the button to 100% of its container */
+    display: block; /* Ensure the button fills the entire width */
+    text-align: center; /* Center-align the button text */
+    padding: 10px 0; /* Add padding to the top and bottom of the button */
+    color: white; /* Set text color to white for better visibility */
+    text-decoration: none; /* Remove underline from the button text */
+    margin: 0; /* Remove any margin */
+    border: 0;
+}
+
+.card-body {
+    padding: 15px; /* Add padding to the card body */
+}
+
+.col-md-4{
+    padding: 5px;
+}
